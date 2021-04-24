@@ -1,0 +1,22 @@
+<!doctype html>
+
+{% load static %}
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Space Science Website Template</title>
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" type="{% static 'text/css' %}" href="css/mobile.css">
+	<script src="js/mobile.js" type="{% static 'text/javascript' %}"></script>
+</head>
+<body class = "radiant_blue_green">
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
