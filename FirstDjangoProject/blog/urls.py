@@ -9,5 +9,6 @@ urlpatterns = [
     path('about/', views.about),
     path("add/", views.add),
     path('multiply/<int:a>/<int:b>/<int:c>', views.multiply),
+    path('reversed/<str:str_name>', views.reversed_string),
 
 ]

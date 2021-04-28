@@ -22,9 +22,10 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blogs', include('blog.urls')),
+    path('blogs/', include('blog.urls')),
     path('', views.IndexPageView.as_view()),
     path('contact/', views.ContactPageView.as_view()),
     path('blog/', views.BlogPageView.as_view()),
     path('greet/<str:name>', views.HelloGreetTemplate.as_view()),
+    path('<str:template>', views.render_templates)
 ]

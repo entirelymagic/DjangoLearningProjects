@@ -17,7 +17,9 @@ def add(request):
     return HttpResponse(f"The result is {a + b + c}")
 
 
-def multiply(request, a, b, c):
-    return HttpResponse(f"Result is {a, b, c}")
+def multiply(request, a, b):
+    return HttpResponse(f"Result is {a, b}")
 
 
+def reversed_string(request, str_name):
+    return HttpResponse(f"{str_name[::-1]}")

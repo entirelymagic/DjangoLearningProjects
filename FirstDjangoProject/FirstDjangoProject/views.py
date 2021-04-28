@@ -25,3 +25,7 @@ class HelloGreetTemplate(TemplateView):
     def get_context_data(self, *args, **kwargs):
         context = {'username': kwargs['name']}
         return context
+
+
+def render_templates(request, template):
+    return render(request, f"{template}")
