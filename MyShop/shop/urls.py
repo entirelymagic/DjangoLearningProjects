@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from . import views
 
 urlpatterns = [
-    path('category/', views.CategoryListView.as_view()),
+    path('categories', views.product_list),
+    path('categories/<slug:category_slug>', views.product_list),
     path('', views.CategoryTemplate.as_view()),
 ]
