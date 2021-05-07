@@ -4,17 +4,26 @@
 
 {% block content %}
   <h3>Categories:</h3>
-<ul>
-  {% for category in categories %}
-    <li>{{ category}}</li>
-      <ul>
-     {% for product in products  %}
-      {% if  product.category == category %}
-        <li>{{product.name}}</li>
-      {% endif %}
+  <ul id="category_list">
+    {% for category in categories %}
+      <li id="category_item">{{ category.name}}</li>
+      <ul id="product_list">
+       {% for product in products  %}
+         {% if product.category == category %}
+           <li id=" product_item">{{product.name}}</li>
+         {% endif %}
+       {% empty %}
+           <li>Sorry, no products in this list.</li>
       {% endfor %}
-
+  
       </ul>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+
 {% endblock %}
+
+
+
+
+
+
