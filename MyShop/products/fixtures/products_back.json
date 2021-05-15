@@ -1,0 +1,86 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "fructe",
+    "slug": "fructe"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "legume",
+    "slug": "legume"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "electrocasnice",
+    "slug": "electrocasnice"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "name": "Lamaie",
+    "slug": "lamaie",
+    "category": 1,
+    "description": "Fruct exotic, acru.",
+    "image": "static/images/products20210505/lamai.jpg",
+    "price": "6.99",
+    "available": true,
+    "created": "2021-05-05T16:57:15.426Z",
+    "updated": "2021-05-05T17:03:05.489Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "name": "Cirese de vara",
+    "slug": "cirese-de-vara",
+    "category": 1,
+    "description": "Un fruct de vara, gust dulce acrisor.",
+    "image": "static/images/products20210505/cirese.jpg",
+    "price": "19.99",
+    "available": true,
+    "created": "2021-05-05T17:00:58.852Z",
+    "updated": "2021-05-07T09:11:48.418Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "name": "Prajitor de paine",
+    "slug": "prajitor-de-paine",
+    "category": 3,
+    "description": "Prajeste painea.",
+    "image": "",
+    "price": "139.00",
+    "available": true,
+    "created": "2021-05-05T17:05:15.360Z",
+    "updated": "2021-05-07T09:11:54.625Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "name": "Patrunjel",
+    "slug": "patrunjel",
+    "category": 2,
+    "description": "Folosit in salate si ciorbe, gust amarui.",
+    "image": "",
+    "price": "0.99",
+    "available": true,
+    "created": "2021-05-07T09:12:53.677Z",
+    "updated": "2021-05-07T09:12:53.677Z"
+  }
+}
+]
