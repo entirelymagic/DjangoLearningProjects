@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # added  applications in order to be able to generate sitemaps
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
     'shop.apps.ShopConfig',
 ]
 
