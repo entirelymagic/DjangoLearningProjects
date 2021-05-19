@@ -28,5 +28,25 @@ class ShoppingCart(object):
         self.save()
 
     def save(self):
-        self.session.modiffied = ''
+        self.session.modified = ''
 
+    def remove_product(self, product):
+        product_id = str(product.id)
+        if product_id in self.cart:
+            del self.cart[product_id]
+            self.save()
+
+    def __iter__(self):
+        """allow iteration for products from ShoppingCart"""
+        product_ids = self.cart.keys()
+        products = Product.objects.filter(id__in=product_ids)
+        cart = self.cart.copy()
+        for product in products:
+            cart[str(product.id)]['product'] = product
+        for item in cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price']* item['quantity']
+            yield item
+
+    def __len__(self):
+        return sum((item['quantity']) for item in self.cart.values())
